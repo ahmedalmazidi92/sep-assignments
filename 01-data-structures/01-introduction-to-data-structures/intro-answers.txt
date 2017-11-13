@@ -1,0 +1,19 @@
+Line
+Q1. How does your data structure allow developers to access and manipulate the data?
+A1. The data structure is a simple array. Developers can access the data by using the methods: first, middle, last and search. They can also manipulate the data by inserting a new person or deleting an existing one
+
+Q2. If a developer wanted to find a specific element in your data structure, how would you search for it?
+A2. Ruby provides a built in method called index, which returns the index of an element in the array that matches the object we're looking for. We then return the object, if it has been found in the array.
+
+Q3. What other real-world data can each structure represent?
+A3. Arrays could be used to represent people waiting in queues.
+
+Screen
+Q1. How does your data structure allow developers to access and manipulate the data?
+A1. Screen is represented by a 2D array (or matrix) that represents a screen. Within the screen, there are pixels at each coordinate. Pixels themselves are classes that represent colors. There are two methods that developers can use: 1. insert, which inserts a new pixel at the specified coordinates  2. at, which returns the pixel to the developer at the specified coordinates
+
+Q2. If a developer wanted to find a specific element in your data structure, how would you search for it?
+A2. The developer must first provide the coordinates. Once provided, we simply return the value using the coordinates in the 2D array i.e [x][y]
+
+Q3. What other real-world data can each structure represent?
+A3. A roulette table?
