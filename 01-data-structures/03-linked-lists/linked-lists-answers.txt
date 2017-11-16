@@ -1,0 +1,14 @@
+Q1. What is Spatial Locality and why does it benefit performance?
+A1. Spatial Locality means that elements in a list are close to each other within the storage space. It benefits performance, as the processor can take these elements from the RAM lookup and place it in the cache, which allows for quicker retrievals
+
+Q2. Benchmarking between Arrays and Linked Lists
+A2.        user     system      total        real
+Array items  0.000000   0.000000   0.000000 (  0.000869)
+LinkedList items  0.000000   0.000000   0.000000 (  0.001026)
+Array retrieval  0.000000   0.000000   0.000000 (  0.000002)
+LinkedList retrieval  0.000000   0.000000   0.000000 (  0.000298)
+Array deleting  0.000000   0.000000   0.000000 (  0.000007)
+LinkedList deleting  0.000000   0.000000   0.000000 (  0.000262)
+
+Arrays are quicker to perform all the tested operations than it's Linked List counterpart. The only times that are comparable between the two are when items are being added to both.
+It is important to note that, we are comparing a native Ruby Array to a standalone LinkedList class, which would skew the results more in the favor of the Array.
