@@ -91,6 +91,8 @@ RSpec.describe SeparateChaining, type: Class do
       expect(movies["A New Hope"]).to eq "Average"
       expect(movies["Empire Strikes Back"]).to eq "Excellent"
       expect(movies["Return of the Jedi"]).to eq "The Best"
+      movies.print
+      star_wars_movies.print
     end
   end
 end
