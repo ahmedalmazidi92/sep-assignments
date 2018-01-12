@@ -1,0 +1,39 @@
+Output of Print:
+
+OpenAddressing:
+
+Index: 2, Key: Star Wars: The Empire Strikes Back, Value: Number Five
+Index: 3, Key: Star Wars: Attack of the Clones, Value: Number Two
+Index: 4, Key: Star Wars: A New Hope, Value: Number Four
+Index: 5, Key: Star Wars: Return of the Jedi, Value: Number Six
+Index: 6, Key: Star Wars: The Phantom Menace, Value: Number One
+Index: 11, Key: Star Wars: Revenge of the Sith, Value: Number Three
+Load Factor: 0.5
+Index: 6, Key: Return of the Jedi, Value: The Best
+Index: 7, Key: A New Hope, Value: Average
+Index: 8, Key: Empire Strikes Back, Value: Excellent
+Load Factor: 0.25
+
+SeparateChaining:
+
+Index: 6, Node 1 - Key: Return of the Jedi, Value: The Best,
+Index: 7, Node 1 - Key: A New Hope, Value: Average,
+Index: 8, Node 1 - Key: Empire Strikes Back, Value: Excellent,
+Load Factor: 0.25
+Index: 2, Node 1 - Key: Star Wars: The Empire Strikes Back, Value: Number Five,
+Index: 3, Node 1 - Key: Star Wars: Return of the Jedi, Value: Number Six, Node 2 - Key: Star Wars: Attack of the Clones, Value: Number Two,
+Index: 4, Node 1 - Key: Star Wars: A New Hope, Value: Number Four,
+Index: 6, Node 1 - Key: Star Wars: The Phantom Menace, Value: Number One,
+Index: 11, Node 1 - Key: Star Wars: Revenge of the Sith, Value: Number Three,
+Load Factor: 0.5
+
+Three Collision Strategies
+1. Cuckoo Hashing - Uses two hashing functions to calculate two indices for the element that's about to be inserted. If the first index has a collision, then the second one is used. If the second index has a collision, then the element to be inserted replaces the element in the first index. The newly removed element will use it's unused index. If there are collisions for every element, then the hash is resized
+2. Double Hashing - Uses two hashing functions. First one is to calculate the index, the second one is to create the offset. If the index location has a collision, then the element will be inserted in the location (offset + index).
+3. Hopscotch Hashing - The index (i) is calculated using a hash function. If there's a collision with the bucket with location i, then an empty bucket (j) which is neighboring i is chosen (H is the distance between a bucket and it's furthest neighbor). If j is not within i's neighborhood, then buckets are swapped around, maintaining the neighborhood constraint, until j is within i's neighborhood. If the neighborhood of bucket i is full, then the hash is resized
+
+Own Collision Strategy
+Random Hashing - The index is calculated using a PseudoRandom Number Generator, where the key is passed as a seed. The PRNG outputs a list of size equal to the hash, with unique and valid locations within a hash in a certain order (as determined by the seed).
+When inserting an element, the first Index is used. If there's a collision with that index, then the next index on the list used. This continues until there's an index with no collisions. Once the hash is full, it is resized.
+To find an element with a specific key, the key is used as a seed for the PRNG to generate the list of possible locations.
+This strategy best case is 1 lookup, and it's worst case is n, where n is the size of the hash. 
