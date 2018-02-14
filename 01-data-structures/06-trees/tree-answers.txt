@@ -1,0 +1,46 @@
+Min Binary Heap
+Pacific Rim: 72
+Braveheart: 78
+Star Wars: Return of the Jedi: 80
+The Matrix: 87
+District 9: 90
+Star Wars: The Empire Strikes Back: 94
+Inception: 86
+Star Wars: A New Hope: 93
+The Shawshank Redemption: 91
+The Martian: 92
+Mad Max 2: The Road Warrior: 98
+
+Binary Search Tree
+The Matrix: 87
+Braveheart: 78
+Mad Max 2: The Road Warrior: 98
+Pacific Rim: 72
+Inception: 86
+District 9: 90
+Star Wars: Return of the Jedi: 80
+The Shawshank Redemption: 91
+The Martian: 92
+Star Wars: The Empire Strikes Back: 94
+Star Wars: A New Hope: 93
+
+Raw Output of Benchmark
+BST Insert  6.260000   0.000000   6.260000 (  6.266512)
+MBH Insert  9.740000   0.000000   9.740000 (  9.755044)
+BST Find  0.000000   0.000000   0.000000 (  0.000700)
+MBH Find  0.000000   0.000000   0.000000 (  0.000859)
+BST Delete  6.920000   0.000000   6.920000 (  6.937179)
+MBH Delete 13.030000   0.000000  13.030000 ( 13.023433)
+
+1. How much time does an average insertion consume in the Binary Search Tree compared to the Heap?
+Average BST Insert ~ 0.00062671 seconds
+Average MBH Insert ~ 0.0009756 seconds
+2. How much time does finding 50000 in the Binary Search Tree consume compared to the Heap?
+BST Find ~ 0.000700
+MBH Find ~ 0.000859
+3. How much time does the average deletion consume in a Binary Search Tree compared to the Heap?
+Average BST Delete ~ 0.00069379 seconds
+Average MBH Delete ~ 0.00130247 seconds
+4. When would you use a Binary Search Tree and why?
+
+5. When would you use an Heap and why?
