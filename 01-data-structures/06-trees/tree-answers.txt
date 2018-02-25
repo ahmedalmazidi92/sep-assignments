@@ -43,5 +43,6 @@ MBH Find ~ 0.003461
 Average BST Delete ~ 0.0003874767 seconds
 Average MBH Delete ~ 0.0006244575 seconds
 4. When would you use a Binary Search Tree and why?
-
+For a data set that would need fast lookup speeds
 5. When would you use an Heap and why?
+For any dataset that requires fast insertions and quick lookups. It is also useful for priority queues
