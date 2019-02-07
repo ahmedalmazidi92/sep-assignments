@@ -1,0 +1,29 @@
+1. Unlocking a door
+SET unlocked to false
+WHILE unlocked = false
+  IF key turns clockwise
+    IF key turns clockwise again
+      SET unlocked = true
+    END IF
+  END IF
+END WHILE
+
+2. Ordering food
+IF hungry
+  Pick up phone
+  Unlock phone
+  Open Food App
+  Pick Restaurant
+  Pick Food for Restaurant
+  Checkout and pay
+END IF
+
+3. Eating Food
+SET hungry to true
+FOR each food from meal
+  Eat food
+  IF full
+    ASSIGN hungry to false
+    Exit FOR loop
+  END IF
+END FOR
